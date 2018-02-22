@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { InvoiceComponent } from './Invoice/invoice.component';
 
 const routes: Routes = [{
   path: '',
@@ -11,6 +12,9 @@ const routes: Routes = [{
     path: 'dashboard',
     component: DashboardComponent,
   }, {
+    path:'Invoice',
+    loadChildren: './Invoice/invoice.module#InvoiceModule',
+  },{
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
   }, {
