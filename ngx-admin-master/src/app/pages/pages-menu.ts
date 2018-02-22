@@ -10,7 +10,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Invoice',
     icon: 'nb-compose',
-    link: '/pages/Invoice'
+    link: '/pages/Invoice',
+    children: [
+      {
+        title: 'Schedule',
+        link: '/pages/Invoice/Schedule',
+      }
+    ]
   },
   {
     title: 'UI Features',
