@@ -2,6 +2,18 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { 
+  InputTextModule, 
+  InputTextareaModule, 
+  GrowlModule, 
+  DropdownModule, 
+  MultiSelectModule, 
+  ButtonModule, 
+  DataTableModule, 
+  DialogModule, 
+  FileUploadModule, 
+  PanelModule 
+} from 'primeng/primeng'
 
 import {
   NbActionsModule,
@@ -51,6 +63,19 @@ const NB_MODULES = [
   NgbModule,
 ];
 
+const PRIMENG_MODULES = [
+  GrowlModule,        
+  InputTextModule,
+  InputTextareaModule,
+  DropdownModule,
+  MultiSelectModule,
+  ButtonModule,
+  DataTableModule,
+  DialogModule,
+  FileUploadModule,
+  PanelModule
+]
+
 const COMPONENTS = [
   ThemeSwitcherComponent,
   HeaderComponent,
@@ -83,8 +108,8 @@ const NB_THEME_PROVIDERS = [
 ];
 
 @NgModule({
-  imports: [...BASE_MODULES, ...NB_MODULES],
-  exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
+  imports: [...BASE_MODULES, ...NB_MODULES, ...PRIMENG_MODULES],
+  exports: [...BASE_MODULES, ...NB_MODULES, ...PRIMENG_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
 })
 export class ThemeModule {
