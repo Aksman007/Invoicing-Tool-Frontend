@@ -12,7 +12,7 @@ export class ScheduleComponent implements OnInit {
 
     userform: FormGroup;
 
-    submitted: boolean = true;
+    submitted: boolean;
 
     genders: SelectItem[];
 
